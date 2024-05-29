@@ -27,8 +27,7 @@ public function add()
     $this->load->view('template/main',$data);
 }
 public function save()
-{
-    
+{    
     $this->User_model->Save();
     if($this->db->affected_rows()>0){
         $this->session->set_flashdata("succes","Data user Berhasil Disimpan");
@@ -48,7 +47,7 @@ public function save()
     public function edit()
     {
         $this->User_model->editData();
-        if($this->db->affected_row()>0){
+        if($this->db->affected_rows()>0){
             $this->session->set_flashdata("success","Data user Berhasil DiUpdate");
         }
         redirect('user');
