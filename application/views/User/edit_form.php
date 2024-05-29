@@ -47,7 +47,7 @@
                                 <?php } ?>
                             </select>
                         </div>
-                        <button class="btn btn-primary" type="submit"><i class="fas fa-plus"></i> Update</button>
+                        <button class="btn btn-primary btn-warning" type="submit"><i class="fas fa-plus"></i> Update</button>
                     </form>
                 </div>
             </div>
