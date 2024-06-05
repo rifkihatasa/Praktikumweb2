@@ -7,6 +7,8 @@ class Login extends CI_Controller
     {
         parent::__construct();
         $this->load->library('form_validation');
+        $this->load->helper('url');
+        $this->load->library('email');
     }
 
     public function index()
@@ -70,10 +72,19 @@ class Login extends CI_Controller
 
     public function block()
     {
+        // $this->load->helper('pos_helper');
+
         $data = array(
             'user'  => $this->session->userdata('username'),
+            // 'user'  => infoLogin(),
             'title' => 'Access Denied!'
         );
         $this->load->view('login/error404', $data);
     }
+
+    public function reset_password()
+    {
+        $this->load->view('login/reset_password');
+    }
+
 }
